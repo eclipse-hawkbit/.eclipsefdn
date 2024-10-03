@@ -4,10 +4,7 @@ orgs.newOrg('eclipse-hawkbit') {
   settings+: {
     blog: "https://eclipse.dev/hawkbit/",
     description: "",
-    members_can_change_project_visibility: false,
     name: "Eclipse hawkBit",
-    packages_containers_internal: false,
-    packages_containers_public: false,
     web_commit_signoff_required: false,
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
