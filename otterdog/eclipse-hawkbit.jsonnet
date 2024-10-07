@@ -39,7 +39,19 @@ orgs.newOrg('eclipse-hawkbit') {
         orgs.newRepoSecret('PAT_SECRET') {
           value: "********",
         },
+        orgs.newRepoSecret('SONAR_TOKEN') {
+          value: "pass:cbi-pass/bots/iot.hawkbit/sonarcloud.io/token-hawkbit",
+        },
       ],
+      variables: [
+        orgs.newRepoVariable('SONAR_ORGANIZATION') {
+          value: "eclipse-hawkbit",
+        },
+        orgs.newRepoVariable('SONAR_PROJECT_KEY') {
+          value: "eclipse-hawkbit_hawkbit",
+        },
+      ],
+
     },
     orgs.newRepo('hawkbit-clients-golang') {
       allow_merge_commit: true,
