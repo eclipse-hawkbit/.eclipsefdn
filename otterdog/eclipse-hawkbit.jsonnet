@@ -35,34 +35,8 @@ orgs.newOrg('eclipse-hawkbit') {
       workflows+: {
         default_workflow_permissions: "write",
       },
-      webhooks: [
-        orgs.newRepoWebhook('https://circleci.com/hooks/github') {
-          events+: [
-            "commit_comment",
-            "create",
-            "delete",
-            "fork",
-            "gollum",
-            "issue_comment",
-            "issues",
-            "member",
-            "public",
-            "pull_request",
-            "pull_request_review_comment",
-            "push",
-            "release",
-            "status",
-            "team_add",
-            "watch"
-          ],
-          secret: "********",
-        },
-      ],
       secrets: [
         orgs.newRepoSecret('PAT_SECRET') {
-          value: "********",
-        },
-        orgs.newRepoSecret('SONARCLOUD_TOKEN') {
           value: "********",
         },
       ],
