@@ -40,7 +40,7 @@ orgs.newOrg('eclipse-hawkbit') {
           value: "********",
         },
         orgs.newRepoSecret('SONAR_TOKEN') {
-          value: "pass:cbi-pass/bots/iot.hawkbit/sonarcloud.io/token-hawkbit",
+          value: "pass:bots/iot.hawkbit/sonarcloud.io/token-hawkbit",
         },
       ],
       variables: [
