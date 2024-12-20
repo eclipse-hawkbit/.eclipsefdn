@@ -1,6 +1,6 @@
 local orgs = import 'vendor/otterdog-defaults/otterdog-defaults.libsonnet';
 
-orgs.newOrg('eclipse-hawkbit') {
+orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
   settings+: {
     blog: "https://eclipse.dev/hawkbit/",
     description: "",
