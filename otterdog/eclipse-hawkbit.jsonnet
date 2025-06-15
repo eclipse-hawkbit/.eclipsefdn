@@ -9,15 +9,23 @@ orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
     workflows+: {
       actions_can_approve_pull_request_reviews: false,
     },
-  },
+  },  secrets+: [
+    orgs.newOrgSecret('GPG_KEY_ID') {
+      value: "pass:bots/iot.hawkbit/gpg/key_id",
+    },
+    orgs.newOrgSecret('GPG_PASSPHRASE') {
+      value: "pass:bots/iot.hawkbit/gpg/passphrase",
+    },
+    orgs.newOrgSecret('GPG_PRIVATE_KEY') {
+      value: "pass:bots/iot.hawkbit/gpg/secret-subkeys.asc",
+    },
+  ],
   _repositories+:: [
     orgs.newRepo('hawkbit') {
       allow_merge_commit: true,
       allow_update_branch: false,
       code_scanning_default_languages+: [
-        "javascript",
-        "javascript-typescript",
-        "typescript"
+        "javascript-typescript"
       ],
       code_scanning_default_setup_enabled: true,
       default_branch: "master",
