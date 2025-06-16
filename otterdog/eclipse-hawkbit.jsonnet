@@ -19,6 +19,12 @@ orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
     orgs.newOrgSecret('GPG_PRIVATE_KEY') {
       value: "pass:bots/iot.hawkbit/gpg/secret-subkeys.asc",
     },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_PASSWORD') {
+      value: "pass:bots/iot.hawkbit/central.sonatype.org/token-password",
+    },
+    orgs.newOrgSecret('CENTRAL_SONATYPE_TOKEN_USERNAME') {
+      value: "pass:bots/iot.hawkbit/central.sonatype.org/token-username",
+    },
   ],
   _repositories+:: [
     orgs.newRepo('hawkbit') {
