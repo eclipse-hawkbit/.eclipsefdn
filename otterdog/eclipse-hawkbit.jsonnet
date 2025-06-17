@@ -10,6 +10,9 @@ orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
       actions_can_approve_pull_request_reviews: false,
     },
   },  secrets+: [
+    orgs.newOrgSecret('GITLAB_API_TOKEN') {
+      value: "pass:bots/iot.hawkbit/gitlab.eclipse.org/api-token",
+    },
     orgs.newOrgSecret('GPG_KEY_ID') {
       value: "pass:bots/iot.hawkbit/gpg/key_id",
     },
