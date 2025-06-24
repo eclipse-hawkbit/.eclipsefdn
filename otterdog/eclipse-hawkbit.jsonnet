@@ -34,7 +34,8 @@ orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
       allow_merge_commit: true,
       allow_update_branch: false,
       code_scanning_default_languages+: [
-        "javascript-typescript"
+        "actions",
+        "javascript-typescript",
       ],
       code_scanning_default_setup_enabled: true,
       default_branch: "master",
