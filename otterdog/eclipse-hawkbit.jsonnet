@@ -43,6 +43,12 @@ orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
       dependabot_security_updates_enabled: true,
       description: "Eclipse hawkBit™",
       homepage: "https://projects.eclipse.org/projects/iot.hawkbit",
+      gh_pages_build_type: "legacy",
+      gh_pages_source_branch: "master",
+      gh_pages_source_path: "/docs",
+      environments: [
+        orgs.newEnvironment('github-pages'),
+      ],
       topics+: [
         "eclipseiot",
         "internet-of-things",
