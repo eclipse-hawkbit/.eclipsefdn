@@ -80,21 +80,22 @@ orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
     orgs.newRepo('hawkbit-clients-golang') {
       allow_merge_commit: true,
       allow_update_branch: false,
+      archived: true,
       default_branch: "master",
       delete_branch_on_merge: false,
       description: "Golang Client SDK for the Eclipse hawkBit Project",
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
     },
     orgs.newRepo('hawkbit-examples') {
       allow_merge_commit: true,
       allow_update_branch: false,
+      archived: true,
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
       webhooks: [
         orgs.newRepoWebhook('https://circleci.com/hooks/github') {
           events+: [
@@ -130,13 +131,12 @@ orgs.newOrg('iot.hawkbit', 'eclipse-hawkbit') {
     orgs.newRepo('hawkbit-extensions') {
       allow_merge_commit: true,
       allow_update_branch: false,
+      archived: true,
       default_branch: "master",
       delete_branch_on_merge: false,
       dependabot_security_updates_enabled: true,
+      secret_scanning_push_protection: "disabled",
       web_commit_signoff_required: false,
-      workflows+: {
-        default_workflow_permissions: "write",
-      },
       webhooks: [
         orgs.newRepoWebhook('https://circleci.com/hooks/github') {
           events+: [
